@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div style="border: 2px solid #000;">
+    <h1>THIS IS THE BODY</h1>
+    <p>aqui tem que ter as coisas do body</p>
+
+    {% include 'personal/snippets/body_snippet.html' %}
+
+    <p>{{some_string}}</p>
+    <p>{{some_number}}</p>
+
+    {% for list_item in list_of_values %}
+        {{list_item}} <br />
+    {% endfor %}
+
+    {% for list_item in list_of_values %}
+        {% include 'personal/snippets/body_snippet.html' with value=list_item %}
+    {% endfor %}
+</div>
+
+{% endblock content%}
