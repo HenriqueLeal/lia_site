@@ -17,6 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from django.templatetags.static import static # Not from django.conf.urls.static 
+from django.views.generic.base import RedirectView
+
 #importando view
 from personal.views import (
     home_screen_view
@@ -25,4 +28,5 @@ from personal.views import (
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_screen_view),
+    path('favicon.ico', RedirectView.as_view(url=static('fav.ico'))),
 ]
