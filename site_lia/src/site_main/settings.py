@@ -31,8 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    #my apps
+    #my apps criados
     'personal',
+    'account',
 
     #Django Apps
     'django.contrib.admin',
@@ -71,6 +72,8 @@ TEMPLATES = [
         },
     },
 ]
+
+AUTH_USER_MODEL = 'account.Account' #vai sobreescrever a forma que o django olha os usuário para a classe que fizemos personalizada
 
 WSGI_APPLICATION = 'site_main.wsgi.application'
 
