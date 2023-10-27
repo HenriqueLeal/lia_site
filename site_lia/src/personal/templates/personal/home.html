@@ -6,18 +6,28 @@
     <h1>THIS IS THE BODY</h1>
     <p>aqui tem que ter as coisas do body</p>
 
+    {% include 'personal/snippets/question_snippet.html' %}
+
+    <!--
     {% include 'personal/snippets/body_snippet.html' %}
 
     <p>{{some_string}}</p>
     <p>{{some_number}}</p>
 
+    
     {% for list_item in list_of_values %}
         {{list_item}} <br />
     {% endfor %}
 
+    
     {% for list_item in list_of_values %}
         {% include 'personal/snippets/body_snippet.html' with value=list_item %}
+    {% endfor %}-->
+
+    {% for question in questions %}
+        {% include 'personal/snippets/question_snippet.html' with value=question %}
     {% endfor %}
+
 </div>
 
 {% endblock content%}
