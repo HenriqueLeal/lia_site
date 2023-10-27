@@ -22,7 +22,7 @@ from django.views.generic.base import RedirectView
 
 #importando view
 from personal.views import (
-    home_screen_view
+    home_screen_view,
 )
 
 urlpatterns = [
