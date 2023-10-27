@@ -24,8 +24,12 @@
         {% include 'personal/snippets/body_snippet.html' with value=list_item %}
     {% endfor %}-->
 
-    {% for question in questions %}
+    <!-- {% for question in questions %}
         {% include 'personal/snippets/question_snippet.html' with value=question %}
+    {% endfor %} -->
+
+    {% for account in accounts %}
+        <p>{{account.username}} || {{account.email}}</p>
     {% endfor %}
 
 </div>
