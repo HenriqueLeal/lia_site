@@ -6,15 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{% static 'images/fav.ico' %}" type="image/x-icon">
     <title>LIA² - Laboratório de Inteligência Artificial Aplicada</title>
+
+    {% if request.user.is_authenticated %}
+        <p>Olá, {{request.user.username}} | <a href="{% url 'logout' %}">Deslogar</a></p>
+    
+    {% else %}
+        <p><a href="{% url 'register'%}">Register</a> | <a href="a">Login</a></p>
+    {% endif %}
 </head>
 
 <body>
+    <hr>
     {% block content %}
 
     {% endblock content %}
 </body>
 
 <footer>
+    <hr>
     <h3>Footer</h3>
 </footer>
 
