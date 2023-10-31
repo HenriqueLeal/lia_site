@@ -28,6 +28,7 @@
         {% include 'personal/snippets/question_snippet.html' with value=question %}
     {% endfor %} -->
 
+    <h3>Usuário cadastrados</h3>
     {% for account in accounts %}
         <p>{{account.username}} || {{account.email}}</p>
     {% endfor %}
